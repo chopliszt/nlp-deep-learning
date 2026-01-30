@@ -205,3 +205,52 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ============================================
+# Configuración específica del proyecto NLP
+# ============================================
+
+# Variables de entorno y secretos adicionales
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets.json
+config/secrets.py
+
+# Credenciales y API keys
+**/credentials.json
+**/token.json
+**/*_credentials.json
+**/*_secret*.json
+kaggle.json
+.kaggle/
+
+# Datasets grandes (evitar subir CSVs pesados)
+*.csv
+*.xlsx
+*.zip
+*.tar.gz
+data/raw/
+data/processed/
+datasets/
+*.h5
+*.hdf5
+
+# Modelos entrenados (pueden ser muy pesados)
+*.pkl
+*.joblib
+*.model
+*.weights
+models/*.pkl
+models/*.h5
+checkpoints/
+saved_models/
+
+# Archivos temporales de Jupyter
+**/.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Configuraciones del IDE
+.vscode/settings.json
+.idea/
